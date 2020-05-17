@@ -4,6 +4,8 @@
 
 ### EnOceanマルチセンサーAzure IoT Plug and Playサンプル
 
+![EnOceanマルチセンサー STM550J](stm550j.jpg)
+
 ## 概要
 [2019年Build](https://news.microsoft.com/build2019/) で発表された [IoT Plug and Play Preview](https://azure.microsoft.com/en-us/blog/build-with-azure-iot-central-and-iot-plug-and-play/) の [EnOceanエネルギーハーベスティングマルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/) と、[PC Linux](https://www.ubuntulinux.jp/) / [Raspberry pi](https://www.raspberrypi.org/) での実装サンプルコードと解説書です。次の内容を含みます。
 
