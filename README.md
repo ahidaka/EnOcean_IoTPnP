@@ -28,7 +28,7 @@
 
 - [USB400J EnOcean USB ゲートウェイ](https://www.enocean.com/en/products/enocean_modules_928mhz/usb-400j/) または同等機能品
 
-![EnOceanマルチセンサー USB400J](USB400jp50.jpg)
+![EnOceanマルチセンサー USB400J](USB400Jp50.jpg)
 
 - [STM550J マルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/) 
 
