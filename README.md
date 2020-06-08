@@ -63,7 +63,7 @@
 
 ### 事前に必要なソフトウェアの準備
 
-[IoT PnP デバイス・ファームウェア 開発手順](development.md)
+[IoT PnP デバイス・ファームウェア 開発手順](Development.md)
 
 Azure IoT Plug and Play (Preview) 対応デバイス側ソフトウェア（Linux）を開発する手順と注意点を示します。 
 
