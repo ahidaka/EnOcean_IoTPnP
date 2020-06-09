@@ -1,40 +1,50 @@
 # EnOcean_IoTPnP
 
-## EnOcean IoT Plug and Play
+## EnOcean IoT Plug and Play (Preview)
 
-#### [de:code 2020](https://www.microsoft.com/ja-jp/events/decode/2020/) Microsoft MVP パーソナル スポンサー 提供サンプルコード
+#### [de:code 2020](https://www.microsoft.com/ja-jp/events/decode/2020/) [Microsoft MVP パーソナル スポンサー](https://www.microsoft.com/ja-jp/events/decode/2020/sponsor.aspx#primaryR10) 提供サンプルコード
 
 ### EnOceanマルチセンサー Azure IoT Plug and Play サンプル
 
-![EnOceanマルチセンサー STM550J](stm550jp75.jpg)
+![EnOceanマルチセンサー STM550J](image/stm550jp75.jpg)
 
 ## 概要
-[2019年Build](https://news.microsoft.com/build2019/) で発表された [IoT Plug and Play Preview](https://azure.microsoft.com/en-us/blog/build-with-azure-iot-central-and-iot-plug-and-play/) の [EnOceanエネルギーハーベスティングマルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/) と、[PC Linux](https://www.ubuntulinux.jp/) / [Raspberry pi](https://www.raspberrypi.org/) での実装サンプルコードと解説書です。次の内容を含みます。
+[2019年Build](https://news.microsoft.com/build2019/) で発表された [IoT Plug and Play Preview](https://azure.microsoft.com/en-us/blog/build-with-azure-iot-central-and-iot-plug-and-play/) の [EnOcean エネルギーハーベスティング マルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/) と、[PC Linux (Ubuntu 18.04)](https://www.ubuntulinux.jp/) / [Raspberry pi](https://www.raspberrypi.org/) での実装サンプルコードと解説書です。次の内容を含みます。
 
-- 温度、湿度、加速度、照度、開閉の [EnOceanマルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/)・インターフェースと [Azure IoT Central](https://azure.microsoft.com/ja-jp/services/iot-central/) 接続ゲートウェイの全コード
-- EnOceanマルチセンサー、IoT Plug and Play、Azure IoT Central 動作確認用ツールの全コード
-- 全ビルド手順、導入手順を示す日本語解説書。これは2020年夏に [EnOcean Alliance](https://www.enocean-alliance.org/ja/) / [IoT ALGYAN](https://algyan.connpass.com/) で開催する オンライン・ハンズオン＋EnOcean開発コンテストの参考資料でもあります。
+- 温度、湿度、加速度、照度、開閉 の [EnOceanマルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/)・インターフェースと [Azure IoT Central](https://azure.microsoft.com/ja-jp/services/iot-central/) 接続ゲートウェイのソースコードとバイナリーコード
+- IoT Plug and Play、Azure IoT Central 動作確認用ツール（シミュレーター）の全コード
+- EnOceanマルチセンサー動作確認用ツールの全コード（[別リポジトリ](https://github.com/ahidaka/EnOceanGateways/tree/master/DolphinRide)）
+- ビルド手順、導入手順、注意点を示す日本語解説書。
+
+シミュレータープログラムは、センサーやゲートウェイを必要とせず単体で動作するため、IoT Central と IoT Plug and Play 動作検証として利用できます。
+
+このサンプルコードは2020年夏に [EnOcean Alliance](https://www.enocean-alliance.org/ja/) / [IoT ALGYAN](https://algyan.connpass.com/) で開催する オンライン・ハンズオン＋EnOcean開発コンテストの参考資料でもあります。
 
 ## ねらい
-- Azure IoT Plug and Playを汎用的プラットフォームで実用的な実装事例を示すことで、早期評価と検証の機会を広げます。
-- IoT Plug and Playを5種類のセンサー内蔵、100m安定無線通信、AESセキュリティ付単価1万円程度の安価で小型高機能なEnOcean新製品のマルチセンサーに対応させることで、実用的なIoT機器として、評価・導入し易さを図ります。
-- 簡単導入可能なAzure IoT Centralへの対応により、Azure IoTの導入のし易さを事例として示します。
+- Azure IoT Plug and Play(Preview) を汎用的プラットフォームでの実用的な実装事例を示すことで、早期評価と検証の機会を広げます。
+- IoT Plug and Play (Preview) を5種類のセンサー内蔵、100m安定無線通信、AESセキュリティ付単価1万円程度の安価で小型高機能なEnOcean新製品のマルチセンサーに対応させることで、実用的なIoT機器として、評価・導入し易さを図ります。
+- 直ぐにデータを可視化表示できる、分かり易く簡単導入可能な Azure IoT Central / IoT Plug and Play (Preview) への対応により、Azure IoT の導入のし易さを事例として示します。
 
 ## 動作に必要なもの
-- Raspberry Pi シリーズ マイコンボード または Ubuntu 18.04 が動作している x86_64 PC
+- Internet 接続のRaspberry Pi シリーズ マイコンボード または Ubuntu 18.04 が動作している x86_64 PC（必須）
+- Azure IoT Central にアクセス可能なブラウザ搭載環境（Windows 10 + New Edge 推奨、必須）
 
-![Raspberry Pi 3B](RspberryPi3p25.jpg)
+![Raspberry Pi 3B](image/RspberryPi3p23.jpg) ![Ubuntu PC](image/Dell_XPS_Ubuntu-p50.png)
+##### Raspberry Pi 3 とUbuntu 18.04動作のPC 例
+[![Azure IoT Central](image/iotc-top-p50.png) "Azure IoT Central"](image/iotc-top.png)
+##### Azure IoT Central へのブラウザアクセス例
 
+- [USB400J EnOcean USB ゲートウェイ](https://www.enocean.com/en/products/enocean_modules_928mhz/usb-400j/) または同等機能品（シミュレーター動作時は不要）
 
-- [USB400J EnOcean USB ゲートウェイ](https://www.enocean.com/en/products/enocean_modules_928mhz/usb-400j/) または同等機能品
+![EnOceanマルチセンサー USB400J](image/USB400Jp50.jpg)
+#####  USB400J
 
-![EnOceanマルチセンサー USB400J](USB400Jp50.jpg)
+- [STM550J マルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/) （シミュレーター動作時は不要）
 
-- [STM550J マルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/) 
+![EnOceanマルチセンサー STM550J](image/stm550jp50.jpg)
+##### STM550J
 
 2020年6月末ごろ [e-kit.jp](http://e-kit.jp/) 等にて販売開始予定 
-
-![EnOceanマルチセンサー STM550J](stm550jp50.jpg)
 
 #### マルチセンサーのテレメトリー内容
 
@@ -51,13 +61,63 @@
 
 ## サンプルバイナリーを動作させる手順
 
-#### ★シミュレーターの件
+### シミュレーターでの動作
 
-### Raspberry pi シリーズ
+操作が容易なので、先にシミュレータープログラムを使った動作方法を説明します。
+
+#### 参考文献
+[Azure IoT Central アプリケーションの作成](https://docs.microsoft.com/ja-jp/azure/iot-central/core/quick-deploy-iot-central)
+
+[チュートリアル:デバイス機能モデルを使用して IoT プラグ アンド プレイ (プレビュー) デバイスを作成し、IoT Central アプリケーションに接続する](https://docs.microsoft.com/ja-jp/azure/iot-central/core/tutorial-connect-pnp-device)
+
+１．準備
+- シミュレーターの入手とインストール
+
+    アーキテクチャに応じたバイナリープログラムを以下からダウンロードして入手後、適当なディレクトリにコピーして下さい。
+    - [Raspberry pi シリーズ simulatepnp/bin/armv7l/simulatepnp](simulatepnp/bin/armv7l/simulatepnp)
+    - [Ubuntu 18.04 x86_64 PC simulatepnp/bin/x86_64/simulatepnp](simulatepnp/bin/x86_64/simulatepnp)
+
+- dps-keygen のインストール
+    Node.js をインストール後、下記コマンドを実行して **dps-keygen** を利用可能にしてください。
+    ```sh
+    npm i -g dps-keygen
+    ```
+    ■アドバイス：  
+    dps-keygen コマンドは実行して結果の文字列が得られれば良いため、必ずしも前記シミュレータープログラムと同じ環境にインストールする必要はありません。
+
+- IoT Central でのカスタム アプリケーション作成
+
+    「カスタム アプリ」 > 「カスタム アプリケーション」 テンプレートを使用して、中身が空のカスタム アプリケーションを作成します。
+
+２．デバイスキーの作成
+
+[デバイス キーの生成](https://docs.microsoft.com/ja-jp/azure/iot-central/core/tutorial-connect-pnp-device#generate-device-key) 手順に従って、前項で作成した「カスタム アプリケーション」の
+「管理」タブの「デバイス接続」ページで、
+**このアプリの SAS トークン** の「キーの表示」をクリックして
+「主キー」をコピーして保存します。
+
+同じ **デバイス接続** 画面の **ID スコープ** は、後でアプリケーション起動時に使用するため、一時的にコピーして保存しておきます。
 
 
-### Ubuntu 18.04 搭載 PC
 
+デバイス キーの生成
+```sh
+dps-keygen -di:enocean-001 -mk:{上記で入手した「主キー」}
+```
+
+di:パラメータで指定するデバイス名は、任意に設定可能です。
+今回のサンプルはmxchipを使用しないので、変更するのであれば、enocean-001 とでもしてください。
+
+
+３．実行
+
+４．動作検証
+
+iotcのデバイスを開きます。
+
+[![iotc-sim1-p50.png](image/iotc-sim1-p50.png "シミュレーター動作画面")](image/iotc-sim1.png)
+
+##### シミュレーター動作画面例
 
 ## 開発手順
 

@@ -1,0 +1,173 @@
+{
+  "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "enocean_sensor"
+  },
+  "contents": [
+    {
+      "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:temperature:1",
+      "@type": "Telemetry",
+      "displayName": {
+        "en": "Temperature"
+      },
+      "name": "temperature",
+      "displayUnit": {
+        "en": "celsius"
+      },
+      "schema": "double",
+      "unit": "Units/Temperature/celsius"
+    },
+    {
+      "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:humidity:1",
+      "@type": "Telemetry",
+      "displayName": {
+        "en": "Humidity"
+      },
+      "name": "humidity",
+      "displayUnit": {
+        "en": "percent"
+      },
+      "schema": "double",
+      "unit": "Units/Humidity/percent"
+    },
+    {
+      "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:illumination:1",
+      "@type": "Telemetry",
+      "displayName": {
+        "en": "Illumination"
+      },
+      "name": "illumination",
+      "displayUnit": {
+        "en": "lux"
+      },
+      "schema": "double"
+    },
+    {
+      "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationstatus:1",
+      "@type": "Telemetry",
+      "displayName": {
+        "en": "Acceleration Status"
+      },
+      "name": "accelerationstatus",
+      "displayUnit": {
+        "en": "enumeratestatus"
+      },
+      "schema": {
+        "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationstatus:jqyvz0yd0:1",
+        "@type": "Enum",
+        "displayName": {
+          "en": "Enum"
+        },
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationstatus:jqyvz0yd0:periodicupdate:1",
+            "@type": "EnumValue",
+            "displayName": {
+              "en": "Periodic Update"
+            },
+            "enumValue": 0,
+            "name": "periodicupdate"
+          },
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationstatus:jqyvz0yd0:threshold1Exceeded:1",
+            "@type": "EnumValue",
+            "displayName": {
+              "en": "Threshold 1 exceeded"
+            },
+            "enumValue": 1,
+            "name": "threshold1Exceeded"
+          },
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationstatus:jqyvz0yd0:threshold2exceeded:1",
+            "@type": "EnumValue",
+            "displayName": {
+              "en": "Threshold 2 exceeded"
+            },
+            "enumValue": 2,
+            "name": "threshold2exceeded"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationx:1",
+      "@type": "Telemetry",
+      "displayName": {
+        "en": "Acceleration X"
+      },
+      "name": "accelerationx",
+      "displayUnit": {
+        "en": "g"
+      },
+      "schema": "double"
+    },
+    {
+      "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationy:1",
+      "@type": "Telemetry",
+      "displayName": {
+        "en": "Acceleration Y"
+      },
+      "name": "accelerationy",
+      "displayUnit": {
+        "en": "g"
+      },
+      "schema": "double"
+    },
+    {
+      "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationz:1",
+      "@type": "Telemetry",
+      "displayName": {
+        "en": "Acceleration Z"
+      },
+      "name": "accelerationz",
+      "displayUnit": {
+        "en": "g"
+      },
+      "schema": "double"
+    },
+    {
+      "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:Contact:1",
+      "@type": "Telemetry",
+      "displayName": {
+        "en": "Contact"
+      },
+      "name": "Contact",
+      "displayUnit": {
+        "en": "enumeratestatus"
+      },
+      "schema": {
+        "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:Contact:4zgrha59vr:1",
+        "@type": "Enum",
+        "displayName": {
+          "en": "Enum"
+        },
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:Contact:4zgrha59vr:open:1",
+            "@type": "EnumValue",
+            "displayName": {
+              "en": "Open"
+            },
+            "enumValue": 0,
+            "name": "open"
+          },
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:Contact:4zgrha59vr:close:1",
+            "@type": "EnumValue",
+            "displayName": {
+              "en": "Close"
+            },
+            "enumValue": 1,
+            "name": "close"
+          }
+        ]
+      }
+    }
+  ],
+  "@context": [
+    "http://azureiot.com/v1/contexts/IoTModel.json"
+  ]
+}

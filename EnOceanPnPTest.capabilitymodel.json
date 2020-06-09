@@ -1,0 +1,290 @@
+{
+  "@id": "urn:enoceanPnp:EnOceanPnPTest2_1yu:1",
+  "@type": "CapabilityModel",
+  "implements": [
+    {
+      "@id": "urn:enoceanPnp:EnOceanPnPTest2_1yu:lishlzvs7:1",
+      "@type": "InterfaceInstance",
+      "name": "DeviceInformation_5kj",
+      "schema": {
+        "@id": "urn:azureiot:DeviceManagement:DeviceInformation:1",
+        "@type": "Interface",
+        "displayName": {
+          "en": "Device information"
+        },
+        "contents": [
+          {
+            "@id": "urn:azureiot:DeviceManagement:DeviceInformation:manufacturer:1",
+            "@type": "Property",
+            "comment": "Company name of the device manufacturer. This could be the same as the name of the original equipment manufacturer (OEM). Ex. Contoso.",
+            "displayName": {
+              "en": "Manufacturer"
+            },
+            "name": "manufacturer",
+            "schema": "string"
+          },
+          {
+            "@id": "urn:azureiot:DeviceManagement:DeviceInformation:model:1",
+            "@type": "Property",
+            "comment": "Device model name or ID. Ex. Surface Book 2.",
+            "displayName": {
+              "en": "Device model"
+            },
+            "name": "model",
+            "schema": "string"
+          },
+          {
+            "@id": "urn:azureiot:DeviceManagement:DeviceInformation:swVersion:1",
+            "@type": "Property",
+            "comment": "Version of the software on your device. This could be the version of your firmware. Ex. 1.3.45",
+            "displayName": {
+              "en": "Software version"
+            },
+            "name": "swVersion",
+            "schema": "string"
+          },
+          {
+            "@id": "urn:azureiot:DeviceManagement:DeviceInformation:osName:1",
+            "@type": "Property",
+            "comment": "Name of the operating system on the device. Ex. Windows 10 IoT Core.",
+            "displayName": {
+              "en": "Operating system name"
+            },
+            "name": "osName",
+            "schema": "string"
+          },
+          {
+            "@id": "urn:azureiot:DeviceManagement:DeviceInformation:processorArchitecture:1",
+            "@type": "Property",
+            "comment": "Architecture of the processor on the device. Ex. x64 or ARM.",
+            "displayName": {
+              "en": "Processor architecture"
+            },
+            "name": "processorArchitecture",
+            "schema": "string"
+          },
+          {
+            "@id": "urn:azureiot:DeviceManagement:DeviceInformation:processorManufacturer:1",
+            "@type": "Property",
+            "comment": "Name of the manufacturer of the processor on the device. Ex. Intel.",
+            "displayName": {
+              "en": "Processor manufacturer"
+            },
+            "name": "processorManufacturer",
+            "schema": "string"
+          },
+          {
+            "@id": "urn:azureiot:DeviceManagement:DeviceInformation:totalStorage:1",
+            "@type": "Property",
+            "comment": "Total available storage on the device in kilobytes. Ex. 2048000 kilobytes.",
+            "displayName": {
+              "en": "Total storage"
+            },
+            "name": "totalStorage",
+            "displayUnit": {
+              "en": "kilobytes"
+            },
+            "schema": "long"
+          },
+          {
+            "@id": "urn:azureiot:DeviceManagement:DeviceInformation:totalMemory:1",
+            "@type": "Property",
+            "comment": "Total available memory on the device in kilobytes. Ex. 256000 kilobytes.",
+            "displayName": {
+              "en": "Total memory"
+            },
+            "name": "totalMemory",
+            "displayUnit": {
+              "en": "kilobytes"
+            },
+            "schema": "long"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "urn:enoceanPnp:EnOceanPnPTest2_1yu:a5uf_sxwq:1",
+      "@type": "InterfaceInstance",
+      "displayName": {
+        "en": "enocean_sensor"
+      },
+      "name": "EnOceanPnPTest2_sensor",
+      "schema": {
+        "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:1",
+        "@type": "Interface",
+        "displayName": {
+          "en": "enocean_sensor"
+        },
+        "contents": [
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:temperature:1",
+            "@type": "Telemetry",
+            "displayName": {
+              "en": "Temperature"
+            },
+            "name": "temperature",
+            "displayUnit": {
+              "en": "celsius"
+            },
+            "schema": "double",
+            "unit": "Units/Temperature/celsius"
+          },
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:humidity:1",
+            "@type": "Telemetry",
+            "displayName": {
+              "en": "Humidity"
+            },
+            "name": "humidity",
+            "displayUnit": {
+              "en": "percent"
+            },
+            "schema": "double",
+            "unit": "Units/Humidity/percent"
+          },
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:illumination:1",
+            "@type": "Telemetry",
+            "displayName": {
+              "en": "Illumination"
+            },
+            "name": "illumination",
+            "displayUnit": {
+              "en": "lux"
+            },
+            "schema": "double"
+          },
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationstatus:1",
+            "@type": "Telemetry",
+            "displayName": {
+              "en": "Acceleration Status"
+            },
+            "name": "accelerationstatus",
+            "displayUnit": {
+              "en": "enumeratestatus"
+            },
+            "schema": {
+              "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationstatus:jqyvz0yd0:1",
+              "@type": "Enum",
+              "displayName": {
+                "en": "Enum"
+              },
+              "valueSchema": "integer",
+              "enumValues": [
+                {
+                  "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationstatus:jqyvz0yd0:periodicupdate:1",
+                  "@type": "EnumValue",
+                  "displayName": {
+                    "en": "Periodic Update"
+                  },
+                  "enumValue": 0,
+                  "name": "periodicupdate"
+                },
+                {
+                  "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationstatus:jqyvz0yd0:threshold1Exceeded:1",
+                  "@type": "EnumValue",
+                  "displayName": {
+                    "en": "Threshold 1 exceeded"
+                  },
+                  "enumValue": 1,
+                  "name": "threshold1Exceeded"
+                },
+                {
+                  "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationstatus:jqyvz0yd0:threshold2exceeded:1",
+                  "@type": "EnumValue",
+                  "displayName": {
+                    "en": "Threshold 2 exceeded"
+                  },
+                  "enumValue": 2,
+                  "name": "threshold2exceeded"
+                }
+              ]
+            }
+          },
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationx:1",
+            "@type": "Telemetry",
+            "displayName": {
+              "en": "Acceleration X"
+            },
+            "name": "accelerationx",
+            "displayUnit": {
+              "en": "g"
+            },
+            "schema": "double"
+          },
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationy:1",
+            "@type": "Telemetry",
+            "displayName": {
+              "en": "Acceleration Y"
+            },
+            "name": "accelerationy",
+            "displayUnit": {
+              "en": "g"
+            },
+            "schema": "double"
+          },
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:accelerationz:1",
+            "@type": "Telemetry",
+            "displayName": {
+              "en": "Acceleration Z"
+            },
+            "name": "accelerationz",
+            "displayUnit": {
+              "en": "g"
+            },
+            "schema": "double"
+          },
+          {
+            "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:Contact:1",
+            "@type": "Telemetry",
+            "displayName": {
+              "en": "Contact"
+            },
+            "name": "Contact",
+            "displayUnit": {
+              "en": "enumeratestatus"
+            },
+            "schema": {
+              "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:Contact:4zgrha59vr:1",
+              "@type": "Enum",
+              "displayName": {
+                "en": "Enum"
+              },
+              "valueSchema": "integer",
+              "enumValues": [
+                {
+                  "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:Contact:4zgrha59vr:open:1",
+                  "@type": "EnumValue",
+                  "displayName": {
+                    "en": "Open"
+                  },
+                  "enumValue": 0,
+                  "name": "open"
+                },
+                {
+                  "@id": "urn:enoceanPnp:EnOceanPnPTest2_sensor:Contact:4zgrha59vr:close:1",
+                  "@type": "EnumValue",
+                  "displayName": {
+                    "en": "Close"
+                  },
+                  "enumValue": 1,
+                  "name": "close"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "displayName": {
+    "en": "EnOcean PnP Test-2"
+  },
+  "@context": [
+    "http://azureiot.com/v1/contexts/IoTModel.json"
+  ]
+}
