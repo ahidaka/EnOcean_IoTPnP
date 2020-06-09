@@ -1,29 +1,14 @@
 
 # IoT PnP デバイス・ファームウェア 開発手順
 
-## 前提条件
-
-多数有り。
-
-
 ### IoT Central で sensor のテンプレートを作成
-- これを、インターフェースファイルとして ダウンロード
-- ■ モデルファイルとインターフェースファイルが別々の場合など、有り。
-
-### VSCode でインターフェースファイルの編集（必要な場合）
-
-
-
-### VSCode でインターフェースファイルを使って、ソースコードの Generate
-- オプションに注意
-
-### 作成したソースコードを Linux 環境に転送
+- これを、インターフェースファイルとして ダウンロードします。
+- テンプレート作成後、インターフェースなどの作成したテンプレートの各サブ項目を表示させるページからダウンロード可能。モデルファイルとインターフェースファイルは別なためそれぞれ、ダウンロードする必要有り。
 
 ### SDK-C のclone
 - clone するBranchに注意
 
-
-### どこかのタイミングで、xxx でインターフェースとモデルを公開
+### インターフェースとモデルをpublic 公開する場合
 - 事前にアカウント作成が必要
 - company or public
 - companyだと、IoT PnP が動作しないらしいので、IoT PnP を試すなら public
@@ -62,13 +47,17 @@ cmake .. -Duse_prov_client=ON -Dhsm_type_symm_key:BOOL=ON
 
 自分で作成した model ファイルと interface ファイルを public リポジトリで公開する手順は、恐らくどこにも記載されていません。次の様にします。約半日調べたり試行錯誤してももわからなかったため、[matsujirushi 様](https://github.com/matsujirushi) に教えて頂きました。
 
-
-
-
+![Certified Store](image/store.png)
 
 ### IoT Explorer の利用
 
 https://github.com/Azure/azure-iot-explorer/issues/299
-にも書きましたが、IoT Central に、
+にも書きましたが、IoT Central 接続時には利用できないようです。
 
+## ライセンス
 
+MIT
+
+© 2020 Atomu Hidaka, All rights reserved.
+
+本コンテンツの著作権、および本コンテンツ中に出てくる商標権、団体名、ロゴ、製品、サービスなどはそれぞれ、各権利保有者に帰属します。
