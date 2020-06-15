@@ -154,7 +154,7 @@ di:パラメータで指定する デバイス ID は、任意に設定可能で
 １．準備
 - 動作プログラムの入手とインストール
 
-    実行環境のアーキテクチャに応じたバイナリープログラムを以下からダウンロードして入手後、適当なディレクトリにコピーして下さい。プログラムは実機動作プログラムと、ゲートウェイプログラムの2種類があります。コピーするだけでインストールは完了です。
+    実行環境のアーキテクチャに応じたバイナリープログラムを以下からダウンロードして入手後、適当なディレクトリにコピーして下さい。プログラムは実機動作プログラムと、EnOcean ゲートウェイプログラムの2種類があります。コピーするだけでインストールは完了です。
     - Raspberry pi シリーズ
  
         [enoceanpnp/bin/armv7l/enoceanpnp](enoceanpnp/bin/armv7l/enoceanpnp)
@@ -177,16 +177,22 @@ di:パラメータで指定する デバイス ID は、任意に設定可能で
     STM550J と USB400J（または同等品）を用意してください。USB400J は動作環境マシンに装着します。
     Windows PC を使用して、EnOcean Dolphin View Advance ツールを使用して同様確認をしておきます。
 
-    ■アドバイス：EnOcean Dolphin View Advance アプリケーションは、EnOcean GmbH の[開発ツールダウンロードページ](https://www.enocean.com/en/support/download/)から入手します。
+    ■アドバイス：
+    EnOcean Dolphin View Advance アプリケーションは、EnOcean GmbH の [開発ツールダウンロードページ](https://www.enocean.com/en/support/download/) から入手します。
 
     最新版は以下の3.8.6.0 です。入手にはメールアドレスによるアカウント登録が必要です。
     https://www.enocean.com/en/support/download/dolphinview-advanced/DolphinViewAdvanced3_8_6_0.exe/
+
+    EnOcean ゲートウェイ プログラム は以下の別リポジトリにあります。
+    
+    [EnOceanGateways リポジトリ](https://github.com/ahidaka/EnOceanGateways)
+
 
 ２．デバイスキーの作成
 デバイスキーの生成手順は、前項の手順と同じです。また、前項で作成した デバイス ID やデバイスキー を流用することも可能ですし、今回例えば デバイス ID を **enocean-002** 等として、新たに作成して使用することも可能です。
 
 ３．センサー登録
-動作環境にインストールした EnOcean ゲートウェイ プログラム(dpride)を「センサー登録モード」起動して、マルチセンサーを動作環境に登録します。
+動作環境にインストールした EnOcean ゲートウェイ プログラム(dpride)を、次のオプションで「センサー登録モード」起動して、マルチセンサーを動作環境に登録します。
 
 ```sh
 ./dpride -c -r
@@ -196,7 +202,7 @@ di:パラメータで指定する デバイス ID は、任意に設定可能で
 
 ![マルチセンサーの LEARNボタン](image/learn-p25mark.jpg)
 
-    ■アドバイス
+    ■アドバイス：
     LEARNボタンは奥まった場所にあるので、クリップの先などで押します。
 
 登録完了後は、「Control-C」で ゲートウェイ プログラムを一旦終了します。
@@ -225,7 +231,7 @@ dpride enoceanpnp ともに「Control-C」 を入力してシミュレーター 
 
 ### 事前に必要なソフトウェアの準備
 
-様々な環境を試しましたが、今回の開発では Windows 上で VS Code と 
+様々な環境を試しましたが、今回の開発では Windows 上で VS Code を使用しています。
 
 ### 概要
 
