@@ -30,22 +30,24 @@
 - Internet 接続のRaspberry Pi シリーズ マイコンボード または Ubuntu 18.04 が動作している x86_64 PC（必須）
 - Azure IoT Central にアクセス可能なブラウザ搭載環境（Windows 10 + New Edge 推奨、必須）
 
-![Raspberry Pi 3B](image/RspberryPi3p23.jpg) ![Ubuntu PC](image/Dell_XPS_Ubuntu-p50.png)
-##### 写真：Raspberry Pi 3 とUbuntu 18.04動作のPC 例
-[![Azure IoT Central](image/iotc-top-p50.png) "Azure IoT Central"](image/iotc-top.png)
-##### 写真：Azure IoT Central へのブラウザアクセス例
+    ![Raspberry Pi 3B](image/RspberryPi3p23.jpg) 
+    ![Ubuntu PC](image/Dell_XPS_Ubuntu-p50.png)
+    ##### 写真：Raspberry Pi 3 とUbuntu 18.04動作のPC 例
+
+    [![Azure IoT Central](image/iotc-top-p50.png) "Azure IoT Central"](image/iotc-top.png)
+    ##### 写真：Azure IoT Central へのブラウザアクセス例
 
 - [USB400J EnOcean USB ゲートウェイ](https://www.enocean.com/en/products/enocean_modules_928mhz/usb-400j/) または同等機能品（シミュレーター動作時は不要）
 
-![EnOceanマルチセンサー USB400J](image/USB400Jp50.jpg)
-##### 写真：USB400J
+    ![USB400J EnOcean USB ゲートウェイ](image/USB400Jp50.jpg)
+    ##### 写真：USB400J
 
 - [STM550J マルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/) （シミュレーター動作時は不要）
 
-![EnOceanマルチセンサー STM550J](image/stm550jp50.jpg)
-##### 写真：STM550J
+    ![EnOceanマルチセンサー STM550J](image/stm550jp50.jpg)
+    ##### 写真：STM550J
 
-2020年6月末ごろ [e-kit.jp](http://e-kit.jp/) 等にて販売開始予定 
+    [e-kit.jp](http://e-kit.jp/) にて予約販売受付中。 
 
 #### マルチセンサーのテレメトリー内容
 
