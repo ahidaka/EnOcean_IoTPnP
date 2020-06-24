@@ -28,13 +28,14 @@
 
 ## 動作に必要なもの
 - Internet 接続のRaspberry Pi シリーズ マイコンボード または Ubuntu 18.04 が動作している x86_64 PC（必須）
-- Azure IoT Central にアクセス可能なブラウザ搭載環境（Windows 10 + New Edge 推奨、必須）
 
     ![Raspberry Pi 3B](image/RspberryPi3p23.jpg) 
     ![Ubuntu PC](image/Dell_XPS_Ubuntu-p50.png)
     ##### 写真：Raspberry Pi 3 とUbuntu 18.04動作のPC 例
 
-    [![Azure IoT Central](image/iotc-top-p50.png) "Azure IoT Central"](image/iotc-top.png)
+- Azure IoT Central にアクセス可能なブラウザ搭載環境（Windows 10 + New Edge 推奨、必須）
+
+    [![Azure IoT Central](image/iotc-top-p50.png)](image/iotc-top.png)
     ##### 写真：Azure IoT Central へのブラウザアクセス例
 
 - [USB400J EnOcean USB ゲートウェイ](https://www.enocean.com/en/products/enocean_modules_928mhz/usb-400j/) または同等機能品（シミュレーター動作時は不要）
