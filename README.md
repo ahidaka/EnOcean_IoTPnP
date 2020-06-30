@@ -65,7 +65,8 @@
 | 加速度センサー(Z) | AZ | accelerationz | double | g | -2.5 | 2.5 |  |
 | 開閉センサー | CO | contact | enum | - | 0 | 1 | Open(0), Close(1) |
 
-    ■アドバイス：
+
+- ■アドバイス：<br/>
     これらのテレメトリーは、NFC付スマートフォンの [EnOcean tool](https://www.enocean.com/en/products/enocean-software/enocean-tool/) で容易に設定変更ができます。[設定解説ビデオはこちら](https://www.youtube.com/watch?v=24BFDGHja9c)。
 
 ## サンプルバイナリーを動作させる手順
@@ -99,10 +100,11 @@
     ```sh
     npm i -g dps-keygen
     ```
-    ■アドバイス：
+ 
+- ■アドバイス：<br/>
     dps-keygen コマンドは実行して結果の文字列が得られれば良いため、必ずしも前記シミュレータープログラムと同じ環境にインストールする必要はありません。
 
-- IoT Central でのカスタム アプリケーション作成
+- IoT Central でのカスタム アプリケーション作成方法
 
    [「Azure IoT Central アプリケーションの作成」](https://docs.microsoft.com/ja-jp/azure/iot-central/core/quick-deploy-iot-central)手順に従って、
     「カスタム アプリ」 > 「カスタム アプリケーション」 テンプレートを使用して、中身が空のカスタム アプリケーションを作成します。
@@ -189,7 +191,7 @@ di:パラメータで指定する デバイス ID は、任意に設定可能で
     STM550J と USB400J（または同等品）を用意してください。USB400J は動作環境マシンに装着します。
     Windows PC を使用して、EnOcean Dolphin View Advance ツールを使用して同様確認をしておきます。
 
-    ■アドバイス：
+- ■アドバイス：<br/>
     EnOcean Dolphin View Advance アプリケーションは、EnOcean GmbH の [開発ツールダウンロードページ](https://www.enocean.com/en/support/download/) から入手します。
 
     最新版は以下の3.8.6.0 です。入手にはメールアドレスによるアカウント登録が必要です。
@@ -211,15 +213,17 @@ di:パラメータで指定する デバイス ID は、任意に設定可能で
 ```sh
 sudo ./dpride -c -r
 ```
-■アドバイス：USB等のデバイスIOポートにアクセスするため、管理者権限で実行します。<br/>
-初出時、"sudo" が抜けいました。申し訳ございません。
+
+- ■アドバイス：<br/>
+    USB等のデバイスIOポートにアクセスするため、管理者権限で実行します。<br/>
+    初出時、"sudo" が抜けいました。申し訳ございません。
 
 その後マルチセンサーの **LEARNボタン** を押して、デバイス登録を完了します。
 起動画面にデバイス登録済のメッセージが出力されます。
 
 ![マルチセンサーの LEARNボタン](image/learn-p25mark.jpg)
 
-    ■アドバイス：
+- ■アドバイス：<br/>
     LEARNボタンは奥まった場所にあるので、クリップの先などで押します。
 
 登録完了後は、「Control-C」で ゲートウェイ プログラムを一旦終了します。
