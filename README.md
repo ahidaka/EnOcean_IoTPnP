@@ -17,7 +17,7 @@
 - EnOceanマルチセンサー動作確認用ツールの全コード（[別リポジトリ](https://github.com/ahidaka/EnOceanGateways/tree/master/DolphinRide)）
 - ビルド手順、導入手順、注意点を示す日本語解説書。
 
-シミュレーター プログラムは、センサーやゲートウェイを必要とせず単体で動作するため、IoT Central と IoT Plug and Play 動作検証として利用できます。
+ここに掲載のシミュレーター プログラムは、センサーやゲートウェイを必要とせず単体で動作するため、IoT Central と IoT Plug and Play 動作検証として利用できます。
 
 このサンプルコードは2020年夏に [EnOcean Alliance](https://www.enocean-alliance.org/ja/) / [IoT ALGYAN](https://algyan.connpass.com/) で開催する オンライン・ハンズオン＋EnOcean開発コンテストの参考資料でもあります。
 
@@ -43,6 +43,8 @@
     ![USB400J EnOcean USB ゲートウェイ](image/USB400Jp50.jpg)
     ##### 写真：USB400J
 
+    [e-kit.jp](http://e-kit.jp/) にて販売中。[STM550J とのセット販売](http://e-kit.jp/products/EnOcean/STM550JSET) も有り。 
+
 - [STM550J マルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/) （シミュレーター動作時は不要）
 
     ![EnOceanマルチセンサー STM550J](image/stm550jp50.jpg)
@@ -62,6 +64,9 @@
 | 加速度センサー(Y) | AY | accelerationy | double | g | -2.5 | 2.5 |  |
 | 加速度センサー(Z) | AZ | accelerationz | double | g | -2.5 | 2.5 |  |
 | 開閉センサー | CO | contact | enum | - | 0 | 1 | Open(0), Close(1) |
+
+    ■アドバイス：
+    これらのテレメトリーは、NFC付スマートフォンの [EnOcean tool](https://www.enocean.com/en/products/enocean-software/enocean-tool/) で容易に設定変更ができます。[設定解説ビデオはこちら](https://www.youtube.com/watch?v=24BFDGHja9c)。
 
 ## サンプルバイナリーを動作させる手順
 
@@ -126,8 +131,11 @@ di:パラメータで指定する デバイス ID は、任意に設定可能で
 
 ```sh
 ./simulatepnp [デバイス ID] [ID スコープ] [デバイス キー]
+```
 
-#例
+#### 例
+
+```sh
 ./simulatepnp enocean-001 0ne0010FFFF 1rmxGaeTzBsCarlTaxyzOL9XXXXXXXXXXXXXXXXwOUg=
 ```
 
@@ -201,8 +209,11 @@ di:パラメータで指定する デバイス ID は、任意に設定可能で
 動作環境にインストールした EnOcean ゲートウェイ プログラム(dpride)を、次のオプションで「センサー登録モード」起動して、マルチセンサーを動作環境に登録します。
 
 ```sh
-./dpride -c -r
+sudo ./dpride -c -r
 ```
+■アドバイス：USB等のデバイスIOポートにアクセスするため、管理者権限で実行します。<br/>
+初出時、"sudo" が抜けいました。申し訳ございません。
+
 その後マルチセンサーの **LEARNボタン** を押して、デバイス登録を完了します。
 起動画面にデバイス登録済のメッセージが出力されます。
 
@@ -223,8 +234,11 @@ di:パラメータで指定する デバイス ID は、任意に設定可能で
 各プログラムをバックグラウンドで実行することも可能ですが、それぞれ起動画面に動作状況ログを出力するのと、ともに「Control-C」で停止させることから、別画面で起動した方が使い勝手が良いです。
 ```sh
 ./enoceanpnp [デバイス ID] [ID スコープ] [デバイス キー]
+```
 
-#例
+#### 例
+
+```sh
 ./enoceanpnp enocean-002 0ne0010FFFF 1rmxGaeTzBsCarlTaxyzOL9XXXXXXXXXXXXXXXXwOUg=
 ```
 
