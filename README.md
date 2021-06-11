@@ -1,8 +1,8 @@
 # EnOcean_IoTPnP
 
-## EnOcean IoT Plug and Play (Preview)
+## EnOcean IoT Plug and Play
 
-#### [de:code 2020](https://www.microsoft.com/ja-jp/events/decode/2020/) [Microsoft MVP パーソナル スポンサー](https://www.microsoft.com/ja-jp/events/decode/2020/sponsor.aspx#primaryR10) 提供サンプルコード
+#### [Microsoft Build 2021](https://mybuild.microsoft.com/home) Microsoft MVP パーソナル スポンサー 提供サンプルコード
 
 ### EnOceanマルチセンサー Azure IoT Plug and Play サンプル
 
@@ -10,7 +10,8 @@
 ##### 写真：EnOceanマルチセンサー STM550J
 
 ## 概要
-[2019年Build](https://news.microsoft.com/build2019/) で発表された [IoT Plug and Play Preview](https://azure.microsoft.com/en-us/blog/build-with-azure-iot-central-and-iot-plug-and-play/) の [EnOcean エネルギーハーベスティング マルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/) と、[PC Linux (Ubuntu 18.04)](https://www.ubuntulinux.jp/) / [Raspberry pi](https://www.raspberrypi.org/) での実装サンプルコードと解説書です。次の内容を含みます。
+[Azure IoT Plug and Play](https://docs.microsoft.com/ja-jp/azure/iot-pnp/overview-iot-plug-and-play?WT.mc_id=IoT-MVP-35878) の [EnOcean エネルギーハーベスティング マルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/) と、[PC Linux (Ubuntu 18.04)](https://www.ubuntulinux.jp/) / [Raspberry pi](https://www.raspberrypi.org/) での実装サンプルコードと解説書です。
+以前は同じページで、Azure IoT Plug and Play (Preview) 用のサンプルを公開していましたが、[Azure IoT Plug and Play](https://docs.microsoft.com/ja-jp/azure/iot-pnp/?WT.mc_id=IoT-MVP-35878) のGAにより、[DTDL V2](https://docs.microsoft.com/ja-jp/azure/digital-twins/concepts-models?WT.mc_id=IoT-MVP-35878) と[Azure IoT Cenrtral V3](https://docs.microsoft.com/ja-jp/azure/iot-central/core/howto-migrate) に対応させました。次の内容を含みます。
 
 - 温度、湿度、加速度、照度、開閉 の [EnOceanマルチセンサー](https://www.enocean.com/en/products/enocean_modules_928mhz/stm-550j-multisensor-module/)・インターフェースと [Azure IoT Central](https://azure.microsoft.com/ja-jp/services/iot-central/) 接続ゲートウェイのソースコードとバイナリーコード
 - IoT Plug and Play、Azure IoT Central 動作確認用ツール（シミュレーター）の全コード
